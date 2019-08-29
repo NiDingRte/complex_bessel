@@ -36,8 +36,8 @@ include_directories (${CMAKE_CURRENT_SOURCE_DIR}/include)
 # -- Source files
 aux_source_directory (${CMAKE_CURRENT_SOURCE_DIR}/src SRC_LIST)
 
-# -- Build a shared library
-add_library(${PROJECT_NAME} SHARED 
+# -- Build a static library
+add_library(${PROJECT_NAME} STATIC  
   ${SRC_LIST}
   "${CMAKE_CURRENT_SOURCE_DIR}/src/amos_iso_c_fortran_wrapper.f90"
   "${CMAKE_CURRENT_SOURCE_DIR}/src/zbesh.for"
