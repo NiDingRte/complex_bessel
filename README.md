@@ -29,16 +29,16 @@ Follow steps 3 and 4 to generate complex_bessel.lib and complex_bessel.dll manua
 Set the source code repository, which contains CMakeLists.txt and the build repository (if it doesn’t exist, it will be created)
 
 Configure: specify the generator for the visual studio version that contains Fortran compiler
-![Cmake_configure](/tests/cmake_configure.png)
+![Cmake_configure](/tests/cmake_configure.PNG)
 
 Generate and open Project with the corresponding visual studio version
 
 ### Step 4:	Generate with Release version in visual studio
 The complex_bessel.lib and complex_bessel.dll are in Release file in build path
-![compile-fortran](/tests/compile-fortran.png)
+![compile-fortran](/tests/compile-fortran.PNG)
 
 ### Step 5:	configure visual studio for mixed-language applications
 
 Follow steps in https://software.intel.com/en-us/articles/configuring-visual-studio-for-mixed-language-applications 
-![configure_vs](/tests/configure_vs.png)
+![configure_vs](/tests/configure_vs.PNG)
 
