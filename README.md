@@ -10,9 +10,9 @@ The CMakeLists.txt is modified in order to create a complex_bessel.lib and compl
 
 ## Compilation Instructions for windows visual studio users. 
 
-### Step 1: The library uses CMake for compilation. Install Cmake for windows https://cmake.org/download/.
+### Step 1: The library uses CMake for compilation. Install Cmake for windows
 
-Download for example cmake-3.15.2-win64-x64.zip.
+https://cmake.org/download/. Download for example cmake-3.15.2-win64-x64.zip.
 
 (Ninja generator 1.8.2 included in visual studio 2019 does not support Fortran)
 
