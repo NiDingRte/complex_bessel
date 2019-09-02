@@ -36,13 +36,23 @@ include_directories (${CMAKE_CURRENT_SOURCE_DIR}/include)
 # -- Source files
 aux_source_directory (${CMAKE_CURRENT_SOURCE_DIR}/src SRC_LIST)
 
+# -- Build a shared library
+add_library(${PROJECT_NAME} SHARED  
+  ${SRC_LIST}
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/amos_iso_c_fortran_wrapper.f90"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/zbesh.for"
+  "${CMAKE_CURRENT_SOURCE_DIR}/src/machine.for")
+  
 # -- Build a static library
-add_library(${PROJECT_NAME} STATIC  
+add_library(foo-static STATIC  
   ${SRC_LIST}
   "${CMAKE_CURRENT_SOURCE_DIR}/src/amos_iso_c_fortran_wrapper.f90"
   "${CMAKE_CURRENT_SOURCE_DIR}/src/zbesh.for"
   "${CMAKE_CURRENT_SOURCE_DIR}/src/machine.for")
 
+SET_TARGET_PROPERTIES(foo-static PROPERTIES
+   OUTPUT_NAME ${PROJECT_NAME} CLEAN_DIRECT_OUTPUT 1)
+   
 # Define the properties of the library to
 # be built (version and other stuff).
 set_target_properties (
