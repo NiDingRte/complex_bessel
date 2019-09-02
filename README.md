@@ -42,3 +42,15 @@ The complex_bessel.lib and complex_bessel.dll are in Release file in build path
 Follow steps in https://software.intel.com/en-us/articles/configuring-visual-studio-for-mixed-language-applications 
 ![configure_vs](/tests/configure_vs.PNG)
 
+
+### Step 6: link DLL implicitly to the c++ project 
+
+Right click on the c++ Project->Properties
+
+C/C++->Additional Included Directories: add location of the header file
+
+Linker->General->Additional Library Directories: add path of the complex_bessel.lib 
+
+Linker->Input->Additional Dependencies: add complex_bessel.lib
+
+![config_project](/tests/config_project.PNG) 
